@@ -1,0 +1,19 @@
+{
+    "devices":{
+        "thermometer1":{
+            "IP":"192.168.0.997",
+            "MAC":"AA-AA-AA-AA",
+            "temp":100
+        },
+        "thermometer2":{
+            "IP":"192.168.0.998",
+            "MAC":"BB-BB-BB-BB",
+            "temp":-100
+        },
+        "thermometer3":{
+            "IP":"192.168.0.999",
+            "MAC":"AA-AA-AA-AA",
+            "temp":0
+        }
+    }
+}

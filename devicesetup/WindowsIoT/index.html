@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+CyberRECon 2026
+Developed by: Mikhail Ortiz-Lunyov
+February 2026
+
+index.html: Test page for IIS HTTP Webserver
+data.json : Example data to be extracted from webserver
+-->
+<html>
+    <head>
+        <meta name="author" content="Mikhail Ortiz-Lunyov">
+        <title>Windows IoT Test</title>
+    </head>
+    <body>
+        <h1>Generic ISS Webserver on Windows IoT</h1>
+        <h2>Theoretical page for local webserver displaying data</h2>
+        <div id="status">Loading data...</div>
+        <p><a href="data.json">data.json</a></p>
+
+        <!-- Example Scipt -->
+        <script>
+            fetch('data.json')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('status').innerText = "Preview: " + data.lab;
+                })
+                .catch(err => {
+                    document.getElementById('status').innerText = "JSON Error - Check MIME types";
+                });
+        </script>
+        <p>DCI Provider, Inc</p>
+    </body>
+</html>
