@@ -25,6 +25,11 @@ echo "Make sure you are connected via eth0!"
 
 # Update packages
 sudo apt update
-sudo apt full-upgrade -y
-# Install `wireshark`, `tshark`, `aircrack-ng`
+# sudo apt full-upgrade -y
+# Confirm `wireshark`, `tshark`, `aircrack-ng` are installed
 sudo apt install wireshark tshark aircrack-ng -y
+
+# Set wlan0 down and up
+sudo ip link set wlan0 down
+sudo iw dev wlan0 set type monitor
+sudo ip link wlan0 up
