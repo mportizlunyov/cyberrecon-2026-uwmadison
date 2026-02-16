@@ -33,6 +33,11 @@ if [ $? == 127 ] ; then
     exit 1
 fi
 
+# Open port 8000
+echo "== OPENING PORT 8000 == == =="
+sudo firewall-cmd --permanent --add-port=8000/tcp
+sudo firewall-cmd --reload
+
 echo "== SETTING UP FastMCP Python == == == =="
 if [ "$1" == "--fullshellinsecure" ] ; then
     python3 ./../server.py 4
