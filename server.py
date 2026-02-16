@@ -146,15 +146,15 @@ if __name__ == "__main__":
         ## PoC #2 (HTTP, Restricted commands)
         elif sys.argv[1] == "2":
             servertype = 2
-            mcp.run(transport="http", port=8000)
+            mcp.run(transport="http", host="0.0.0.0", port=8000)
         ## PoC #3 (HTTP, Un-Restricted commands)
         elif sys.argv[1] == "3":
             servertype = 3
-            mcp.run(transport="http", port=8000)
+            mcp.run(transport="http", host="0.0.0.0", port=8000)
         ## PoC #4 (HTTP, FULL Shell access)
         elif sys.argv[1] == "4":
             servertype = 4
-            mcp.run(transport="http", port=8000)
+            mcp.run(transport="http", host="0.0.0.0", port=8000)
         ## Bad option
         else:
             print("Improper argument given")
